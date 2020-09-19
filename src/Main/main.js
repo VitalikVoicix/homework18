@@ -77,7 +77,7 @@ export default class Main extends Component {
                       <p className="wantUp">I want to receive inspiration marketing via mail</p>
                <Button>Sign up</Button>
                 <div className="href">
-                     <a href="/SignIn" >Already have an account? Sign in</a>
+                     <a href="/signIn" >Already have an account? Sign in</a>
                 </div> 
                    <p className="footer">Copyright © Your Website 2020.</p>
                 <div>
