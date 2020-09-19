@@ -1,0 +1,80 @@
+
+  
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #000;
+  }
+  
+.wrapper{
+  height: 520px;
+  width: 410px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  border-radius:10px;
+  cursor: default;
+  position: absolute;
+  left:550px;
+  top:180px;
+  animation: animate 1.5s linear infinite;
+}
+  
+  @keyframes animate {
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .wrapper span{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: inherit;
+  }
+  .wrapper span:first-child{
+    filter: blur(7px);
+  }
+  .wrapper span:last-child{
+    filter: blur(20px);
+  }
+  .lockPng{
+    width: 50px;
+    position: absolute;
+    top:40px;
+    left:170px;
+  }
+  
+  .wantUp{
+    color: white;
+    position: absolute;
+    top:370px;
+    left: 40px;
+  }
+  
+  .btn:hover{
+      color:blue;
+      font-size: 30px;
+  }
+
+  .href{
+        color:#90CAF9;
+        position: absolute;
+        top:460px;
+        right: 20px;
+        font-size: 15px;
+  }
+  .footer{
+    color:#90CAF9;
+    position: absolute;
+        top:500px;
+        right: 120px;
+        font-size: 12px;
+  }
+ 
+
+  
