@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter,Route} from "react-router-dom"
+import {BrowserRouter,Route,Switch} from "react-router-dom"
 import Header from"./Header/header"
 import Main from"./Main/main"
 import SignIn from"./SignIn/SignIn"
@@ -13,10 +13,9 @@ function App() {
    <BrowserRouter>
      <Header />
      <Main />
-     
-	  
-	 
+     <Switch>
       <Route path ='/signIn'component={SignIn}/>
+    </Switch>
 	</BrowserRouter>
     </div>
     
