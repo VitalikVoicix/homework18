@@ -18,7 +18,7 @@ function App() {
               <Route  path="/" exact render={()=> <Redirect to="/signUp" />}/>
                  <Route path="/signIn" exact component={Main} />
                  <Route path="/signUp" exact component={SignIn} />      
-	   </Switch>
+	             </Switch>
      </HashRouter> 
      </div>
   
