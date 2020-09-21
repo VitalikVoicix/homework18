@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import "./main.css"
 import padlock from "./padlock.png"
-import SignIn from "../SignIn/SignIn"
+import{NavLink}from "react-router-dom"
+//import SignIn from "../SignIn/SignIn"
 import {Sign,Name,Surname,Mail,Password,Checkbox,Button,Display}from "./StyledComponent/sign.js"
 
 export default class Main extends Component {
@@ -77,7 +78,7 @@ export default class Main extends Component {
                       <p className="wantUp">I want to receive inspiration marketing via mail</p>
                <Button>Sign up</Button>
                 <div className="href">
-                     <a href="/signIn" >Already have an account? Sign in</a>
+                     <NavLink to ="/signUp" >Already have an account? Sign in</NavLink>
                 </div> 
                    <p className="footer">Copyright © Your Website 2020.</p>
                 <div>

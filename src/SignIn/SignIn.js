@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import padlock from "../Main/padlock.png"
 import "./SignIn.css"
+import{Link}from "react-router-dom"
 
 export default class SignIn extends Component {
 
@@ -29,13 +30,23 @@ export default class SignIn extends Component {
                  <div className="display">
                       <img src={padlock} alt="lock"className="lockPng"/> 
                       <p className="signIn">Sign in</p>  
-                      <input type="mail"className="mailIn"placeholder={this.state.mail}style={{border:this.state.border}} onChange={this.saveEmail} ></input>
-                      <input type="password"className="passwordIn" style={{border:this.state.border}} placeholder={this.state.password}onChange={this.savePassword}></input>
+                      <input type="mail"
+                           className="mailIn"
+                           placeholder={this.state.mail}
+                           style={{border:this.state.border}}
+                           onChange={this.saveEmail} >    
+                       </input>
+                      <input type="password"
+                           className="passwordIn"
+                           style={{border:this.state.border}} 
+                           placeholder={this.state.password}
+                           onChange={this.savePassword}>                         
+                       </input>
                       <input type="checkbox"className="checkboxIn"></input>
                       <p className="wantIn">Remember me</p>
                       <button className ="btnIn">Sign in</button>
                       <p className="forgotIn">Forgot password?</p>
-                      <a className= "hrefIn" href="/signUp"onClick={this.showBlock}>Dont have an account? Sign up</a>
+                      <Link to ="/signIn" className= "hrefIn"onClick={this.showBlock}>Dont have an account? Sign up </Link>
                      <p className="footerIn">Copyright © Your Website 2020.</p>
                 </div>
           </div>
