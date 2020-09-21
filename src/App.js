@@ -9,18 +9,18 @@ import './App.css';
 
 function App() {
   return (
-  
+   
     <div className="App">
-      <BrowserRouter> 
+     <BrowserRouter> 
             <Header />
               <Switch>
-                 <Route  path="/" exact render={()=> <Redirect to="/signUp" />}></Route>
+              <Route  path="/" exact render={()=> <Redirect to="/signUp" />}/>
                  <Route path="/signIn" exact component={Main} />
                  <Route path="/signUp" exact component={SignIn} />      
-            </Switch>
-	   </BrowserRouter>
-    </div>
-    
+	   </Switch>
+     </BrowserRouter> 
+     </div>
+  
   );
 }
 
