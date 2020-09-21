@@ -13,6 +13,7 @@ function App() {
     <div className="App">
      <BrowserRouter> 
             <Header />
+            <Main />
               <Switch>
               <Route  path="/" exact render={()=> <Redirect to="/signUp" />}/>
                  <Route path="/signIn" exact component={Main} />
