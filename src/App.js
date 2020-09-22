@@ -15,9 +15,9 @@ function App() {
             <Header />
             <Main />
               <Switch>
-              <Route  path="/" exact render={()=> <Redirect to="/signUp" />}/>
-                 <Route path="/signIn" exact component={Main} />
-                 <Route path="/signUp" exact component={SignIn} />      
+              <Route  path="/" exact render={()=> <Redirect to="/signIn" />}/>
+                 <Route path="/signUp" exact component={Main} />
+                 <Route path="/signIn" exact component={SignIn} />      
 	             </Switch>
      </HashRouter> 
      </div>
