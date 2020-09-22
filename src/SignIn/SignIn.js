@@ -46,9 +46,10 @@ export default class SignIn extends Component {
                       <p className="wantIn">Remember me</p>
                       <button className ="btnIn">Sign in</button>
                       <p className="forgotIn">Forgot password?</p>
-                      <Link to ="/signIn" className= "hrefIn"onClick={this.showBlock}>Dont have an account? Sign up </Link>
+                      <Link to ="/signUp" className= "hrefIn"onClick={this.showBlock}>Dont have an account? Sign up </Link>
                      <p className="footerIn">Copyright © Your Website 2020.</p>
                 </div>
+                <span></span>
           </div>
         )
     }
