@@ -2,7 +2,7 @@ import React from 'react';
 import {HashRouter,Route,Switch,Redirect} from "react-router-dom"
 import Header from"./Header/header"
 import Main from"./Main/main"
-import SignIn from"./SignIn/SignIn"
+import SignUp from"./SignUp/SignUp"
 
 
 import './App.css';
@@ -13,11 +13,11 @@ function App() {
     <div className="App">
      <HashRouter> 
             <Header />
-            <Main />
+            {/*<Main />*/}
               <Switch>
               <Route  path="/" exact render={()=> <Redirect to="/signIn" />}/>
-                 <Route path="/signUp" exact component={Main} />
-                 <Route path="/signIn" exact component={SignIn} />      
+                 <Route path="/signIn" exact component={Main} />
+                 <Route path="/signUp" exact component={SignUp} />      
 	             </Switch>
      </HashRouter> 
      </div>

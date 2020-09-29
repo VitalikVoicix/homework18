@@ -1,91 +1,88 @@
-import React, { Component } from 'react'
+import React, {Component,useState } from 'react'
 import "./main.css"
-import padlock from "./padlock.png"
+import padlock from "../Image/padlock.png"
 import{Link}from "react-router-dom"
-//import SignIn from "../SignIn/SignIn"
-import {Sign,Name,Surname,Mail,Password,Checkbox,Button,Display}from "./StyledComponent/sign.js"
+
+import {Sign,Name,Surname,Mail,Password,Checkbox,Button,Display}from "../SignUp/StyledComponent/sign.js"
+import { render } from '@testing-library/react'
 
 export default class Main extends Component {
+
     state={
-        showSignIn:false,
         mail:"Your Mail ",
         password: "Password",
-        name:"First Name *",
-        surname:"Last Name*",
-        border:""
+        border:""    
     }
     
     saveEmail = (event) => {
         this.setState({
             mail:event.target.value,
-            border:"4px solid blue"
+            border:"4px solid blue",            
         })
     }
     savePassword = (event) => {
         this.setState({
             password:event.target.value,
-            border:"4px solid blue",
+            border:"4px solid blue",      
         })
     }
 
-    saveName = (event) => {
-        this.setState({
-            name:event.target.value,
-            border:"4px solid blue",
-        })
-    }
-
-    saveSurname = (event) => {
-        this.setState({
-            surname:event.target.value,
-            border:"4px solid blue",
-
-        })
-    }
+    CheckData = () => {
+        if (
+          this.state.mail === localStorage.getItem("mail") &&
+          this.state.password === localStorage.getItem("password")
+        ) {
+          alert("true");
+        } else {
+          alert("false");
+        }
+      };
 
 
     render() {
         return (
-            <div className="wrapper">
-               <Display>
-                <img src={padlock} alt="lock"className="lockPng"/> 
-                <Sign >Sign up</Sign >
-                <Name 
-                     type ="text"
-                     style={{border:this.state.border}}
-                     placeholder={this.state.name}
-                     onChange={this.saveName}>
-                </Name>
-                <Surname 
-                    type="text"
-                    style={{border:this.state.border}}
-                    placeholder={this.state.surname}
-                    onChange={this.saveSurname}>                
-                 </Surname>
-                <Mail 
-                     style={{border:this.state.border}} 
-                     placeholder={this.state.mail} 
-                     type="mail"
-                    onChange={this.saveEmail} >  
-                </Mail>
-                <Password 
-                     style={{border:this.state.border}}
-                     type="password"
-                     placeholder={this.state.password}
-                     onChange={this.savePassword}>
-                 </Password>
-                <Checkbox type="checkbox"></Checkbox>
-                      <p className="wantUp">I want to receive inspiration marketing via mail</p>
-               <Button>Sign up</Button>
-                <div className="href">
-                     <Link to ="/signIn" >Already have an account? Sign in</Link>
-                </div> 
-                   <p className="footer">Copyright © Your Website 2020.</p>
-                <div>
-                    <span></span>
-               </div>
-               </Display>
-           </div>
-       )
+            <div className="wrapperIn">
+                 <div className="display">
+                      <img src={padlock} alt="lock"className="lockPng"/> 
+                      <p className="signIn">Sign in</p>  
+                      <input type="mail"
+                           className="mailIn"
+                           placeholder={this.state.mail}
+                           style={{border:this.state.border}}
+                           onChange={this.saveEmail} >    
+                       </input>
+                      <input type="password"
+                           className="passwordIn"
+                           style={{border:this.state.border}} 
+                           placeholder={this.state.password}
+                           onChange={this.savePassword}>                         
+                       </input>
+                      <input type="checkbox"className="checkboxIn"></input>
+                      <p className="wantIn">Remember me</p>
+                      <button className ="btnIn"onClick={this.CheckData}>Sign in</button>
+                      <p className="forgotIn">Forgot password?</p>
+                      <Link to ="/signUp" className= "hrefIn"onClick={this.showBlock}>Dont have an account? Sign up </Link>
+                     <p className="footerIn">Copyright © Your Website 2020.</p>
+                </div>
+                <span></span>
+          </div>
+        )
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

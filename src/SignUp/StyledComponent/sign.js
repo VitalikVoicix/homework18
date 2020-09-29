@@ -89,16 +89,17 @@ font-size: 20px;
 
 `
 const Display = styled.div`
-          position: absolute;
-          top:50%;
-          left: 45%;
-          transform: translate(-50%, -50%);
-          z-index: 55555;
-          height: 520px;
-          width: 412px;
-          background: #1b1b1b;
-          border-radius: 6px;
-          text-align: center;
+position: absolute;
+top: 63%;
+left: 50.9%;
+transform: translate(-50%, -50%);
+z-index: 55555;
+height: 540px;
+width: 422px;
+background: #1b1b1b;
+border-radius: 6px;
+text-align: center;
+
 `
 
 
