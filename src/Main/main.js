@@ -4,7 +4,7 @@ import padlock from "../Image/padlock.png"
 import{Link}from "react-router-dom"
 
 import {Sign,Name,Surname,Mail,Password,Checkbox,Button,Display}from "../SignUp/StyledComponent/sign.js"
-import { render } from '@testing-library/react'
+//import { render } from '@testing-library/react'
 
 export default class Main extends Component {
 
@@ -17,13 +17,13 @@ export default class Main extends Component {
     saveEmail = (event) => {
         this.setState({
             mail:event.target.value,
-            border:"4px solid blue",            
+            //border:"4px solid green",            
         })
     }
     savePassword = (event) => {
         this.setState({
             password:event.target.value,
-            border:"4px solid blue",      
+            ///border:"4px solid green",      
         })
     }
 

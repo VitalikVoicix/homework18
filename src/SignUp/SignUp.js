@@ -19,27 +19,27 @@ export default class SignUp extends Component {
 saveEmail = (event) => {
     this.setState({
         mail:event.target.value,
-        border:"4px solid blue"
+        //border:"4px solid blue"
     })
 }
 savePassword = (event) => {
     this.setState({
         password:event.target.value,
-        border:"4px solid blue",
+        //border:"4px solid blue",
     })
 }
 
 saveName = (event) => {
     this.setState({
         name:event.target.value,
-        border:"4px solid blue",
+       // border:"4px solid blue",
     })
 }
 
 saveSurname = (event) => {
     this.setState({
         surname:event.target.value,
-        border:"4px solid blue",
+       // border:"4px solid blue",
 
     })
 }
